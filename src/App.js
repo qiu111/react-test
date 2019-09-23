@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// rcc有状态组件(类)
+// rfc无状态组件(function)
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import './App.css'
+import Navbar from './compontens/layout/Navbar.js'
+import UserItem from './compontens/users/UserItem'
+import Users from './compontens/users/Users'
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar title="Github Finder"> </Navbar>
+        <UserItem></UserItem>  
+        <Users></Users>  
+      </div>
+
+      // <React.Fragment className="aaa">
+      //   <h2>hello react</h2>
+      //   <label htmlFor="male">ssss</label>
+      // </React.Fragment>
+
+    )
+  }
 }
-
-export default App;
