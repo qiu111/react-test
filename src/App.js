@@ -6,14 +6,19 @@ import './App.css'
 import Navbar from './compontens/layout/Navbar.js'
 import UserItem from './compontens/users/UserItem'
 import Users from './compontens/users/Users'
+// import TestUser from './compontens/users/TestUser'
 
 export default class App extends Component {
   render() {
     return (
       <div>
         <Navbar title="Github Finder"> </Navbar>
-        <UserItem></UserItem>  
-        <Users></Users>  
+        <UserItem></UserItem>
+        <div className="container">
+          <Users />
+        </div>
+
+        {/* <TestUser /> */}
       </div>
 
       // <React.Fragment className="aaa">
