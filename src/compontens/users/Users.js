@@ -1,38 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Spinner from '../layout/Spinner'
 import UserItem from './UserItem'
+import propTypes from 'prop-types'  //进行类型检查
 
-class Users extends Component {
-    state={
-        users: [
-            {
-                login: "mojombo1",
-                id: 1,
-                avatar_url: "https://avatars0.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-            {
-                login: "mojombo2",
-                id: 2,
-                avatar_url: "https://avatars0.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            },
-            {
-                login: "mojombo3",
-                id: 3,
-                avatar_url: "https://avatars0.githubusercontent.com/u/1?v=4",
-                html_url: "https://github.com/mojombo",
-            }
-        ]
-    }
-    render() {
+const Users =({users,loading})=> {
+    if(loading){
+        return <Spinner />
+    }else{
         return (
             <div style={userStyle}>
-                {this.state.users.map(user=>(
+                {users.map(user=>(
                     <UserItem key={user.id} user={user} />
                 ))}
             </div>
         )
     }
+        
 }
 
 const userStyle={
@@ -41,4 +24,11 @@ const userStyle={
     gridGap:"1rem"
 }
 
+users.propTypes = {
+    users:PropTypes.array.isRequired,  //ptar
+    loading: PropTypes.bool.isRequired,  //ptbr
+}
+
 export default Users
+
+

@@ -4,8 +4,6 @@ import React, { Component } from 'react'
 class UserItem extends Component {
     render() {
         const user = this.props.user || {}
-        console.log(user);
-
         const { login, avatar_url, html_url } = user;
         return (
             <div className="card text-center" >
