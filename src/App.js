@@ -9,6 +9,10 @@ import Users from './compontens/users/Users'
 // import TestUser from './compontens/users/TestUser'
 
 export default class App extends Component {
+  componentDidMount(){
+    console.log("111");
+    
+  }
   render() {
     return (
       <div>
