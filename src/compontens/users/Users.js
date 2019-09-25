@@ -1,7 +1,8 @@
 import React from 'react'
 import Spinner from '../layout/Spinner'
 import UserItem from './UserItem'
-import propTypes from 'prop-types'  //进行类型检查
+import PropTypes from 'prop-types'  //进行类型检查
+
 
 const Users =({users,loading})=> {
     if(loading){
@@ -24,7 +25,7 @@ const userStyle={
     gridGap:"1rem"
 }
 
-users.propTypes = {
+Users.propTypes = {
     users:PropTypes.array.isRequired,  //ptar
     loading: PropTypes.bool.isRequired,  //ptbr
 }
