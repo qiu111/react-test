@@ -35,6 +35,8 @@ export class Search extends Component {
                         className="btn btn-dark btn-block"
                     />
                 </form>
+                <button className="btn btn-light btn-block">Clear</button>
+
             </div>
         )
     }
